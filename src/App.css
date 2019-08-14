@@ -2,6 +2,8 @@
 
 .App {
   text-align: center;
+  width:50%;
+  margin: 0 auto;
 }
 
 .App-logo {
@@ -28,11 +30,19 @@
 .nasaCardContainer{
   /* border:1px solid black; */
   background-color:grey;
-  width:50%;
-  margin:0 auto;
+  width:90%;
+  margin:4rem auto;
+  display:flex;
+  flex-direction: column;
 }
 
-.nasaCard{
+.imageContainer, 
+.textContainer{
+  padding: 2%;
+}
+
+.nasaCard,
+.nasaTextCard{
   width:80%;
   margin:0 auto;
 
@@ -43,7 +53,6 @@
 .nasaDate{
   font-family: 'Blinker', sans-serif;
   color:white;
-  padding: 2%;
 }
 
 .nasaImgDesc{
