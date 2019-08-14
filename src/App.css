@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Blinker|Libre+Caslon+Display&display=swap');
+
 .App {
   text-align: center;
 }
@@ -34,6 +36,20 @@
   width:80%;
   margin:0 auto;
 
+}
+
+.nasaTitle, 
+.appTitle,
+.nasaDate{
+  font-family: 'Blinker', sans-serif;
+  color:white;
+  padding: 2%;
+}
+
+.nasaImgDesc{
+  font-family: 'Libre Caslon Display', serif;
+  color:white;
+  padding-bottom:5%;
 }
 
 .nasaImg{

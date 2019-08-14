@@ -21,7 +21,7 @@ function App() {
     <div className="App">
       <div className="nasaCardContainer">
         <div className="imgContainer">
-          <h1>Nasa Photo of the Day!</h1>
+          <h1 className="appTitle">Nasa Photo of the Day!</h1>
             <SpaceImgCard 
             title={nasaData.title}
             media_type={nasaData.media_type}
