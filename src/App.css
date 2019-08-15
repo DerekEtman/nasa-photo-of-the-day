@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Blinker|Libre+Caslon+Display&display=swap');
+
 .App {
   text-align: center;
+  width:50%;
+  margin: 0 auto;
 }
 
 .App-logo {
@@ -21,6 +25,44 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.nasaCardContainer{
+  /* border:1px solid black; */
+  background-color:grey;
+  width:90%;
+  margin:4rem auto;
+  display:flex;
+  flex-direction: column;
+}
+
+.imageContainer, 
+.textContainer{
+  padding: 2%;
+}
+
+.nasaCard,
+.nasaTextCard{
+  width:80%;
+  margin:0 auto;
+
+}
+
+.nasaTitle, 
+.appTitle,
+.nasaDate{
+  font-family: 'Blinker', sans-serif;
+  color:white;
+}
+
+.nasaImgDesc{
+  font-family: 'Libre Caslon Display', serif;
+  color:white;
+  padding-bottom:5%;
+}
+
+.nasaImg{
+  width:100%;
 }
 
 @keyframes App-logo-spin {
