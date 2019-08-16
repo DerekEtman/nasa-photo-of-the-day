@@ -4,17 +4,20 @@ import "./App.scss";
 import SpaceImgCard from "./components/imageComponents/spaceImgCard";
 import TextCard from "./components/textComponents/textCard";
 import styled from "styled-components";
-// import SpaceImgGrid from "./components/imageComponents/spaceImgGrid";
+import SpaceMenu from "./components/menuComponents/menu";
+
+
 
 const StyledButton = styled.button`
-background: ${props => props.primary ? "palevioletred" : "white"};
-color: ${props => props.primary ? "white" :"palevioletred"};
+background: ${props => props.primary ? "palevioletred" : "black"};
+color: ${props => props.primary ? "black" :"white"};
 
 font-size: 1rem;
 margin: 1rem;
 padding: 0.25rem 1rem;
-border: 2px solid palevioletred;
+border: 2px solid black;
 border-radius: 3px;
+
 `;
 
 
@@ -23,7 +26,7 @@ function App() {
 
   useEffect(() =>{
     axios
-    .get('https://api.nasa.gov/planetary/apod?api_key=U4BMv1y6WcxwvGTyQpSNLLUJ4gQOJq8prb2vneSL')
+    .get('https://api.nasa.gov/planetary/apod?api_key=U4BMv1y6WcxwvGTyQpSNLLUJ4gQOJq8prb2vneSL&date=${}')
     .then(response =>{
       setNasaData(response.data)
       console.log("Response back: ", response.data);
@@ -33,6 +36,7 @@ function App() {
   
   return (
     <div className="App">
+        <SpaceMenu className="test" />
       <div className="nasaCardContainer">
 
         <div className="imgContainer">
@@ -54,7 +58,7 @@ function App() {
           
           <StyledButton > primary </StyledButton>
         </div>
-          
+                 
       </div>
     </div>
   );
