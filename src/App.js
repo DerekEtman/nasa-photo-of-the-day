@@ -12,13 +12,13 @@ import Calendar from "./components/calendar";
 
 
 const StyledButton = styled.button`
-background: ${props => props.primary ? "palevioletred" : "black"};
+background: ${props => props.primary ? "palevioletred" : "silver"};
 color: ${props => props.primary ? "black" :"white"};
 
 font-size: 1rem;
 margin: 1rem;
 padding: 0.25rem 1rem;
-border: 2px solid black;
+border: 2px solid white;
 border-radius: 3px;
 
 `;
@@ -44,6 +44,7 @@ function App() {
         <Calendar />
         {/* <SpaceMenu className="test" /> */}
       <div className="nasaCardContainer">
+          <StyledButton > Pick a Date </StyledButton>
 
         <div className="imgContainer">
 
@@ -62,7 +63,6 @@ function App() {
           date={nasaData.date}
           description={nasaData.explanation}/>
           
-          <StyledButton > primary </StyledButton>
         </div>
                  
       </div>
