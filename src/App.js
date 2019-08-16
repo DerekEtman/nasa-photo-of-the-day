@@ -1,10 +1,13 @@
 import React,{useState, useEffect} from "react";
+import ReactDom from "react-dom";
 import axios from "axios";
 import "./App.scss";
 import SpaceImgCard from "./components/imageComponents/spaceImgCard";
 import TextCard from "./components/textComponents/textCard";
 import styled from "styled-components";
-import SpaceMenu from "./components/menuComponents/menu";
+// import SpaceMenu from "./components/menuComponents/menu";
+import Calendar from "./components/calendar";
+
 
 
 
@@ -21,12 +24,14 @@ border-radius: 3px;
 `;
 
 
+
 function App() {
   const [nasaData,setNasaData] = useState([]);
-
+  const [picDate, setpicDate] = useState([]);
+  
   useEffect(() =>{
     axios
-    .get('https://api.nasa.gov/planetary/apod?api_key=U4BMv1y6WcxwvGTyQpSNLLUJ4gQOJq8prb2vneSL&date=${}')
+    .get('https://api.nasa.gov/planetary/apod?api_key=U4BMv1y6WcxwvGTyQpSNLLUJ4gQOJq8prb2vneSL')
     .then(response =>{
       setNasaData(response.data)
       console.log("Response back: ", response.data);
@@ -36,7 +41,8 @@ function App() {
   
   return (
     <div className="App">
-        <SpaceMenu className="test" />
+        <Calendar />
+        {/* <SpaceMenu className="test" /> */}
       <div className="nasaCardContainer">
 
         <div className="imgContainer">
